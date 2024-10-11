@@ -163,7 +163,6 @@ func workerPool(urls []string, workerCount int, reqFn func(url string) int, show
 }
 
 // workerPool2 makes requests using worker pool too, but:
-// - Jobs channel is larger
 // - Result calculated by 'results' channel
 // - Map access sync is not required
 func workerPool2(urls []string, workerCount int, reqFn func(url string) int, showResults bool) map[int]int {
